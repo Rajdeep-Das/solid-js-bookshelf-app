@@ -25,7 +25,7 @@ function Bookshelf(props:BookshelfProps) {
   const toggleForm = () => setShowForm(!showForm());
 
   return (
-    <div>
+    <div style={}>
       <h1>{props.name}'s Bookshelf</h1>
       <BookList books={books()} />
       <Show
