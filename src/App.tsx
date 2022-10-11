@@ -1,8 +1,9 @@
 import type { Component } from 'solid-js';
 import { createSignal,Show} from "solid-js";
-
 import { BookList } from "./BookList";
 import { AddBook } from "./AddBook";
+
+import  style from "./App.module.css";
 
 export type Book = {
   title: string;
@@ -25,7 +26,7 @@ function Bookshelf(props:BookshelfProps) {
   const toggleForm = () => setShowForm(!showForm());
 
   return (
-    <div style={}>
+    <div class={style.App}>
       <h1>{props.name}'s Bookshelf</h1>
       <BookList books={books()} />
       <Show
