@@ -1,3 +1,6 @@
+# A Solid-JS App Demo
+https://rajdeep-das.github.io/solid-js-bookshelf-app/
+
 ## Usage
 
 Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
@@ -32,3 +35,10 @@ Your app is ready to be deployed!
 ## Deployment
 
 You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
+
+```bash
+npm run build
+git add dist -f
+git subtree push --prefix dist origin gh-pages
+
+```
