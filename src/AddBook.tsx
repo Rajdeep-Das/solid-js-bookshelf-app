@@ -25,14 +25,20 @@ export function AddBook(props: AddBookProps) {
             onInput={(e) => {
               setInput(e.currentTarget.value);
             }}
+            class="bg-gray-50 border
+             border-gray-300 text-gray-900 text-sm rounded-lg
+             focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5
+             dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 
+             dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           />
         </div>
         <button
-          type="submit"
+          type="button"
           onClick={(e) => {
             e.preventDefault();
             setQuery(input());
           }}
+          class="bg-purple-500 hover:bg-purple-700 text-white  py-2 px-4  mt-4 rounded"
         >
           Search
         </button>
@@ -49,6 +55,7 @@ export function AddBook(props: AddBookProps) {
                     e.preventDefault();
                     props.setBooks((books) => [...books, book]);
                   }}
+                  class="bg-purple-500 hover:bg-purple-700 text-white  py-2 px-4 rounded"
                 >
                   Add
                 </button>

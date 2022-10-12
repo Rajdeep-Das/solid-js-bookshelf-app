@@ -15,7 +15,7 @@ export function BookList(props: BookListProps) {
             <For each={props.books}>
                 {(book) => {
                 return (
-                    <li>
+                    <li class="text-sm text-gray-500">
                     {book.title}
                     <span style={{ "font-style": "italic" }}> ({book.author})</span>
                     </li>

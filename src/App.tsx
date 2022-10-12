@@ -3,7 +3,7 @@ import { createSignal,Show} from "solid-js";
 import { BookList } from "./BookList";
 import { AddBook } from "./AddBook";
 
-import  style from "./App.module.css";
+
 
 export type Book = {
   title: string;
@@ -26,15 +26,16 @@ function Bookshelf(props:BookshelfProps) {
   const toggleForm = () => setShowForm(!showForm());
 
   return (
-    <div class={style.App}>
-      <h1>{props.name}'s Bookshelf</h1>
-      <BookList books={books()} />
+    <div>
+      <h1 class="text-3xl font-bold text-center">{props.name}'s Bookshelf</h1>
+      
+      <BookList books={books()}/>
       <Show
         when={showForm()}
-        fallback={<button onClick={toggleForm}>Add a book</button>}
+        fallback={<button type="button" class="bg-purple-500 hover:bg-purple-700 text-white  py-2 px-4 rounded" onClick={toggleForm}>Add a book</button>}
       >
         <AddBook setBooks={setBooks} />
-        <button onClick={toggleForm}>Finished adding books</button>
+        <button class="bg-purple-500 hover:bg-purple-700 text-white  py-2 px-4 rounded mt-4" onClick={toggleForm}>Finished adding books</button>
       </Show>
     </div>
   );
@@ -43,9 +44,9 @@ function Bookshelf(props:BookshelfProps) {
 const App: Component = () => {
 
   return (
-    <>
+    <div class="flex justify-center mt-5">
       <Bookshelf name="Rajdeep"/>
-    </>
+    </div>
   );
 };
 
